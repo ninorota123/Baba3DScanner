@@ -1,12 +1,15 @@
 package com.bestgame.baba3dscanner
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.MediaController
 import android.widget.VideoView
+import android.os.Environment
+import java.io.File
 
 class VideoPlayerActivity : AppCompatActivity() {
     private lateinit var videoView: VideoView
@@ -33,7 +36,14 @@ class VideoPlayerActivity : AppCompatActivity() {
 
         val calculate3dModelButton = findViewById<Button>(R.id.calculate3dModelButton)
         calculate3dModelButton.setOnClickListener {
-            // Hier den Code zum Starten der 3D-Modellberechnung hinzufügen
+            val modelsFolderPath = "${getExternalFilesDir(Environment.DIRECTORY_MOVIES)}/Baba3DScanner/Modelle"
+            val modelsFolder = File(modelsFolderPath)
+            if (!modelsFolder.exists()) {
+                modelsFolder.mkdirs()
+            }
+            // Starten von ModelCalculationActivity
+            val intent = Intent(this, ModelCalculationActivity::class.java)
+            startActivity(intent)
         }
     }
 }

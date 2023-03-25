@@ -19,8 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Baba3DScanner">
         <activity
-            android:name=".VideoPreviewActivity"
-            android:exported="false" />
+            android:name=".ModelCalculationActivity" />
         <activity
             android:name=".VideoPlayerActivity"
             android:exported="false" />
