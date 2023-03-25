@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Baba3DScanner</string>
+    <string name="projektname">Projektname:</string>
+    <string name="geben_sie_den_projektname_ein">Geben Sie den Projektname ein</string>
+    <string name="ok">OK</string>
+    <string name="scannen">Scannen</string>
+    <string name="meine_projekte">Meine Projekte</string>
+    <string name="Modelle">Modelle</string>
+    <string name="Entwürfe">Entwürfe</string>
+
+</resources>
