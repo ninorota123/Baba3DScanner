@@ -41,9 +41,11 @@ class VideoPlayerActivity : AppCompatActivity() {
             if (!modelsFolder.exists()) {
                 modelsFolder.mkdirs()
             }
-            // Starten von ModelCalculationActivity
+            //Starten von ModelCalculationActivity
             val intent = Intent(this, ModelCalculationActivity::class.java)
+            intent.putExtra("videoName", File(videoFilePath).nameWithoutExtension)
             startActivity(intent)
         }
+
     }
 }
